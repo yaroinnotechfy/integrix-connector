@@ -21,7 +21,6 @@ result = action
     <field name="code">env['integrix.sync'].run_import_once()</field>
     <field name="interval_type">hours</field>
     <field name="interval_number">1</field>
-    <field name="numbercall">-1</field>
     <field name="active">False</field>
   </record>
 </odoo>
