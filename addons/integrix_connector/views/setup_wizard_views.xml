@@ -88,54 +88,6 @@
       </form>
     </field>
   </record>
-<record id="view_integrix_setup_wizard_form_step2" model="ir.ui.view">
-    <field name="name">integrix.setup.wizard.form.step2</field>
-    <field name="model">integrix.setup.wizard</field>
-    <field name="arch" type="xml">
-      <form string="Integri-x Setup — Step 2/4: Sync Policy" create="false" edit="true" delete="false">
-        <sheet>
-          <group>
-            <group string="SSOT"><field name="ssot"/></group>
-            
-          </group>
-        </sheet>
-        <footer>
-<button name="action_next" type="object" string="Next" class="btn-primary oe_highlight"/>
-        </footer>
-      </form>
-    </field>
-  </record>
-<record id="view_integrix_setup_wizard_form_step3" model="ir.ui.view">
-    <field name="name">integrix.setup.wizard.form.step3</field>
-    <field name="model">integrix.setup.wizard</field>
-    <field name="arch" type="xml">
-      <form string="Integri-x Setup — Step 3/4: Field Mapping" create="false" edit="true" delete="false">
-        <sheet>
-          <group class="o_inner_group o_col-12">
-            <field name="line_ids" widget="one2many_list" context="{'default_wizard_id': active_id}" editable="bottom" class="ix-map-list" options="{'no_open': True}">
-              <tree>
-                <field name="sequence" widget="handle"/>
-                <field name="active" string="Active"/>
-                <field name="ix_field" string="Integrix"/>
-                <field name="odoo_field" string="Odoo Field"/>
-              </tree>
-              <form string="Mapping line">
-                <group>
-                  <field name="active"/>
-                  <field name="sequence" invisible="1"/>
-                  <field name="ix_field"/>
-                  <field name="odoo_field"/>
-                </group>
-              </form>
-            </field>
-          </group>
-        </sheet>
-        <footer>
-<button name="action_next" type="object" string="Next" class="btn-primary oe_highlight"/>
-        </footer>
-      </form>
-    </field>
-  </record>
 <record id="view_integrix_setup_wizard_form_step4" model="ir.ui.view">
     <field name="name">integrix.setup.wizard.form.step4</field>
     <field name="model">integrix.setup.wizard</field>
