@@ -11,6 +11,8 @@ class IntegrixConfig(models.Model):
         return base.rstrip('/')
 
     _name = 'integrix.config'
+
+    mapping_ids = fields.One2many("integrix.field.map", "config_id", string="Field Mapping")
     _description = 'Integri-x Settings'
 
     base_url = fields.Char(string='Base URL')
