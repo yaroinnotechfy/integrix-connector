@@ -5,9 +5,16 @@
     <field name="model">maintenance.equipment</field>
     <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
     <field name="arch" type="xml">
-      <xpath expr="//tree/field[@name='serial_no']" position="after">
-        <field name="x_is_linked" string="Linked" widget="boolean_button" readonly="1"/>
-      </xpath>
+      
+    <xpath expr="//*[local-name()='tree' or local-name()='list']/field[@name='serial_no']" position="after">
+<field name="x_is_linked" string="Linked" widget="boolean_button" readonly="1"/>
+    </xpath>
+    <xpath expr="//*[local-name()='tree' or local-name()='list']/field[@name='name']" position="after">
+<field name="x_is_linked" string="Linked" widget="boolean_button" readonly="1"/>
+    </xpath>
+    <xpath expr="//*[local-name()='tree' or local-name()='list']" position="inside">
+<field name="x_is_linked" string="Linked" widget="boolean_button" readonly="1"/>
+    </xpath>
     </field>
   </record>
 
