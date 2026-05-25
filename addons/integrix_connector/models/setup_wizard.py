@@ -100,7 +100,11 @@ class IntegrixSetupWizard(models.TransientModel):
         vals.setdefault("signup_first_name", first)
         vals.setdefault("signup_last_name", last)
         vals.setdefault("signup_email", (user.email or user.login or "").strip())
-        phone = (user.partner_id.mobile or user.partner_id.phone or "").strip()
+        partner = user.partner_id
+        phone = ((getattr(partner, 'mobile', False)
+                  or getattr(partner, 'mobile_phone', False)
+                  or getattr(partner, 'phone', False)
+                  or "")).strip()
         if phone:
             vals.setdefault("signup_phone", phone)
         vals.setdefault("signup_company_name", (user.company_id.name or "").strip())
