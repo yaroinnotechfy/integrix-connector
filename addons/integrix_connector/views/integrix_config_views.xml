@@ -30,7 +30,7 @@
           
 
           <group string="Field Mapping" colspan="2">
-            <field name="mapping_ids" context="{'default_config_id': active_id}">
+            <field name="mapping_ids" context="{'default_config_id': id}">
               <list editable="bottom">
                 <field name="ix_field"/>
                 <field name="odoo_field"/>
