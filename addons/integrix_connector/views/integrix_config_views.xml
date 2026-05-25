@@ -31,10 +31,10 @@
 
           <group string="Field Mapping" colspan="2">
             <field name="mapping_ids" context="{'default_config_id': active_id}">
-              <tree editable="bottom">
+              <list editable="bottom">
                 <field name="ix_field"/>
                 <field name="odoo_field"/>
-              </tree>
+              </list>
               <form>
                 <group>
                   <field name="ix_field"/>
