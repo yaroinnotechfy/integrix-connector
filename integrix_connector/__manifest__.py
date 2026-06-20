@@ -4,7 +4,7 @@
   "summary": "Base connector",
   "author": "Integri-X",
   "license": "LGPL-3",
-  "website": "https://example.com",
+  "website": "https://www.integri-x.com",
   "depends": ["base", "maintenance"],
   "post_init_hook": "post_init_hook",
   "data": [
@@ -30,4 +30,5 @@
   },
   "installable": True,
   "application": True
+    'images': ['static/description/banner.png'],
 }
