@@ -1,5 +1,5 @@
 {
-  "name": "Integri-x Connector",
+  "name": 'IntegriX',
   "version": "17.0.1.0.0",
   "summary": "Base connector",
   "author": "Integri-X",
